@@ -8,30 +8,12 @@ si se trata de un perro (por ejemplo, “Bup, bup!”) o un gato (por ejemplo �
 
 */
 // Clase Principal 
-abstract Class Animal {
-    // Atributos
-    public $nombre;
+require("Animales.php");
+require("Animal.php");
+require("Gato.php");
+require("Perro.php");
 
-    // Constructor 
-    public function __construct($nombre){
-        $this -> nombre = $nombre;
-    }
-
-    // Metodo
-    abstract public function makeSound();
-}
-
-class Perro extends Animal{     
-    public function makeSound(){
-        echo "Bup, bup!" ."<br><hr>";
-    }
-}
-class Gato extends Animal{
-    public function makeSound(){
-        echo "Mi!" ."<br><hr>";
-    }
-}
-
+# Instanciando
 $perro = new Perro("Rocky");
 $perro -> makeSound() ."<br>";
 
